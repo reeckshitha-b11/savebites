@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SaveBite | Good Food. Better Prices.</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">🍱</span>
+            <span>Save<span>Bite</span></span>
+        </div>
+
+        <nav>
+            <a href="#deals">Explore</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#sell">Sell Surplus</a>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="login-btn">Login</button>
+            <button class="cart-btn" onclick="openCart()">
+                🛒 <span id="cart-count">0</span>
+            </button>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="small-badge">
+                    🌱 Fighting food waste, one bite at a time
+                </div>
+
+                <h1>
+                    Good food.
+                    <span>Crazy good prices.</span>
+                </h1>
+
+                <p>
+                    Restaurants have extra food.
+                    You want delicious food without hurting your wallet.
+                    We thought...
+                </p>
+
+                <h3 class="funny-line">
+                    Why not put you two together? 😌
+                </h3>
+
+                <div class="hero-buttons">
+                    <button class="primary-btn" onclick="scrollToDeals()">
+                        🔥 Find a Deal
+                    </button>
+
+                    <button class="secondary-btn" onclick="showSellerMessage()">
+                        🏪 Sell Surplus Food
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+
+                    <div>
+                        <strong>50%</strong>
+                        <small>Average Savings</small>
+                    </div>
+
+                    <div>
+                        <strong>0</strong>
+                        <small>Food Wasted</small>
+                    </div>
+
+                    <div>
+                        <strong>∞</strong>
+                        <small>Happy Bites</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO FOOD CARD -->
+
+            <div class="hero-visual">
+
+                <div class="floating-card discount-card">
+                    🔥 50% OFF
+                </div>
+
+                <div class="food-showcase">
+
+                    <div class="food-emoji">
+                        🍛
+                    </div>
+
+                    <div class="food-info">
+
+                        <span class="limited">
+                            ● LIMITED DEAL
+                        </span>
+
+                        <h3>Chicken Biryani</h3>
+
+                        <p>Spice Street</p>
+
+                        <div class="price">
+
+                            <span class="old-price">
+                                ₹100
+                            </span>
+
+                            <span class="new-price">
+                                ₹50
+                            </span>
+
+                        </div>
+
+                        <div class="food-meta">
+                            📍 1.2 km &nbsp; • &nbsp; ⏰ 42 min left
+                        </div>
+
+                        <button class="grab-btn" onclick="addToCart()">
+                            Grab This Deal →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= DEALS ================= -->
+
+        <section class="deals-section" id="deals">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        🔥 DON'T LET THESE ESCAPE
+                    </span>
+
+                    <h2>
+                        Deals near you
+                    </h2>
+
+                    <p>
+                        Good food is waiting. Your wallet will thank you.
+                    </p>
+                </div>
+
+                <button class="view-all">
+                    View all →
+                </button>
+
+            </div>
+
+
+            <div class="food-grid">
+
+
+                <!-- CARD 1 -->
+
+                <article class="food-card">
+
+                    <div class="food-image biryani">
+
+                        <span class="discount-tag">
+                            50% OFF
+                        </span>
+
+                        <span class="heart">
+                            ♡
+                        </span>
+
+                        🍛
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="restaurant">
+                            Spice Street
+                            <span>✓</span>
+                        </div>
+
+                        <h3>Chicken Biryani</h3>
+
+                        <div class="card-price">
+                            <del>₹100</del>
+                            <strong>₹50</strong>
+                        </div>
+
+                        <div class="card-details">
+                            📍 1.2 km
+                            <span>•</span>
+                            🔥 8 left
+                        </div>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart()">
+                            + Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 2 -->
+
+                <article class="food-card">
+
+                    <div class="food-image pizza">
+
+                        <span class="discount-tag">
+                            40% OFF
+                        </span>
+
+                        <span class="heart">
+                            ♡
+                        </span>
+
+                        🍕
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="restaurant">
+                            Crust Corner
+                            <span>✓</span>
+                        </div>
+
+                        <h3>Farmhouse Pizza</h3>
+
+                        <div class="card-price">
+                            <del>₹250</del>
+                            <strong>₹150</strong>
+                        </div>
+
+                        <div class="card-details">
+                            📍 2.1 km
+                            <span>•</span>
+                            🔥 4 left
+                        </div>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart()">
+                            + Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 3 -->
+
+                <article class="food-card">
+
+                    <div class="food-image meals">
+
+                        <span class="discount-tag">
+                            50% OFF
+                        </span>
+
+                        <span class="heart">
+                            ♡
+                        </span>
+
+                        🍱
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="restaurant">
+                            Amma's Kitchen
+                            <span>✓</span>
+                        </div>
+
+                        <h3>South Indian Meals</h3>
+
+                        <div class="card-price">
+                            <del>₹120</del>
+                            <strong>₹60</strong>
+                        </div>
+
+                        <div class="card-details">
+                            📍 0.8 km
+                            <span>•</span>
+                            🔥 12 left
+                        </div>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart()">
+                            + Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CARD 4 -->
+
+                <article class="food-card">
+
+                    <div class="food-image bakery">
+
+                        <span class="discount-tag">
+                            30% OFF
+                        </span>
+
+                        <span class="heart">
+                            ♡
+                        </span>
+
+                        🥐
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <div class="restaurant">
+                            Bake House
+                            <span>✓</span>
+                        </div>
+
+                        <h3>Fresh Croissants</h3>
+
+                        <div class="card-price">
+                            <del>₹180</del>
+                            <strong>₹126</strong>
+                        </div>
+
+                        <div class="card-details">
+                            📍 1.7 km
+                            <span>•</span>
+                            🔥 6 left
+                        </div>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart()">
+                            + Add to Cart
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HOW IT WORKS ================= -->
+
+        <section class="how-section" id="how-it-works">
+
+            <div class="section-heading centered">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    Saving food is ridiculously simple.
+                </h2>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-icon">
+                        🏪
+                    </div>
+
+                    <h3>
+                        Restaurants list extras
+                    </h3>
+
+                    <p>
+                        Businesses list safe surplus food
+                        before it goes to waste.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-icon">
+                        🔥
+                    </div>
+
+                    <h3>
+                        Prices get deliciously low
+                    </h3>
+
+                    <p>
+                        Customers get the same food
+                        at a much lower price.
+                    </p>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-icon">
+                        😋
+                    </div>
+
+                    <h3>
+                        Someone eats very well
+                    </h3>
+
+                    <p>
+                        Less waste. More savings.
+                        Everybody wins.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SELLER CTA ================= -->
+
+        <section class="seller-section" id="sell">
+
+            <div class="seller-content">
+
+                <span>
+                    🏪 FOR RESTAURANTS & FOOD BUSINESSES
+                </span>
+
+                <h2>
+                    Got extra food?
+                    <br>
+                    Don't throw money away.
+                </h2>
+
+                <p>
+                    Turn your surplus food into extra revenue
+                    while helping reduce food waste.
+                </p>
+
+                <button onclick="showSellerMessage()">
+                    Become a SaveBite Seller →
+                </button>
+
+            </div>
+
+            <div class="seller-emoji">
+                💰
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= CART POPUP ================= -->
+
+    <div class="cart-overlay" id="cart-overlay">
+
+        <div class="cart-box">
+
+            <button
+                class="close-cart"
+                onclick="closeCart()">
+                ×
+            </button>
+
+            <h2>
+                Your Cart 🛒
+            </h2>
+
+            <div id="cart-items">
+
+                <p class="empty-cart">
+                    Your cart is feeling lonely. 🥲
+                </p>
+
+            </div>
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cart-total">
+                    ₹0
+                </strong>
+
+            </div>
+
+            <button class="checkout-btn">
+                Continue to Checkout →
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div id="toast" class="toast">
+        🍛 Added to your rescue mission!
+    </div>
+
+
+    <!-- ================= LOADING ================= -->
+
+    <div id="loading-screen" class="loading-screen">
+
+        <div class="loading-box">
+
+            <div class="loading-food">
+                🍛
+            </div>
+
+            <h2>
+                Finding tasty deals...
+            </h2>
+
+            <p id="loading-text">
+                Asking the biryani where it is 👀
+            </p>
+
+            <div class="loader">
+                <div></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <div class="footer-logo">
+            🍱 SaveBite
+        </div>
+
+        <p>
+            Good food. Better prices. Less waste.
+        </p>
+
+        <small>
+            © 2026 SaveBite
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
